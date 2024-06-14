@@ -35,11 +35,12 @@
             label_password = new Label();
             textBox_Username = new TextBox();
             textBox_password = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button_Clear
             // 
-            button_Clear.Location = new Point(334, 234);
+            button_Clear.Location = new Point(278, 250);
             button_Clear.Name = "button_Clear";
             button_Clear.Size = new Size(94, 29);
             button_Clear.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             // button_Login
             // 
-            button_Login.Location = new Point(445, 234);
+            button_Login.Location = new Point(389, 250);
             button_Login.Name = "button_Login";
             button_Login.Size = new Size(94, 29);
             button_Login.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // button_Exit
             // 
-            button_Exit.Location = new Point(156, 304);
+            button_Exit.Location = new Point(100, 320);
             button_Exit.Name = "button_Exit";
             button_Exit.Size = new Size(94, 29);
             button_Exit.TabIndex = 2;
@@ -70,7 +71,7 @@
             // label_Username
             // 
             label_Username.AutoSize = true;
-            label_Username.Location = new Point(180, 107);
+            label_Username.Location = new Point(124, 123);
             label_Username.Name = "label_Username";
             label_Username.Size = new Size(75, 20);
             label_Username.TabIndex = 3;
@@ -79,7 +80,7 @@
             // label_password
             // 
             label_password.AutoSize = true;
-            label_password.Location = new Point(180, 166);
+            label_password.Location = new Point(124, 182);
             label_password.Name = "label_password";
             label_password.Size = new Size(72, 20);
             label_password.TabIndex = 4;
@@ -87,23 +88,34 @@
             // 
             // textBox_Username
             // 
-            textBox_Username.Location = new Point(299, 109);
+            textBox_Username.Location = new Point(243, 125);
             textBox_Username.Name = "textBox_Username";
             textBox_Username.Size = new Size(266, 27);
             textBox_Username.TabIndex = 5;
             // 
             // textBox_password
             // 
-            textBox_password.Location = new Point(299, 163);
+            textBox_password.Location = new Point(243, 179);
             textBox_password.Name = "textBox_password";
             textBox_password.Size = new Size(266, 27);
             textBox_password.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 25F);
+            label1.Location = new Point(211, 43);
+            label1.Name = "label1";
+            label1.Size = new Size(196, 57);
+            label1.TabIndex = 7;
+            label1.Text = "Welcome";
             // 
             // form_Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(623, 383);
+            Controls.Add(label1);
             Controls.Add(textBox_password);
             Controls.Add(textBox_Username);
             Controls.Add(label_password);
@@ -113,6 +125,7 @@
             Controls.Add(button_Clear);
             Name = "form_Login";
             Text = "Login";
+            Load += form_Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,5 +139,6 @@
         private Label label_password;
         private TextBox textBox_Username;
         private TextBox textBox_password;
+        private Label label1;
     }
 }
